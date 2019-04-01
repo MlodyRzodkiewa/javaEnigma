@@ -1,0 +1,13 @@
+Planning
+
+1. Podzial na szyfry:
+Konrad: ROT13, 
+Szymon: Caesar,
+Hubert:
+
+2. Glowny plik enigma.java
+Kazdy szyfr w osobnym pliku/klasie
+Program odpalany z argsow:
+    -l pokazuje dostepne szyfry
+    -e zaszyfruj(encrypt)
+    -d odszyfruj(decrypt)
