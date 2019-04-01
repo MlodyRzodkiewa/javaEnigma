@@ -1,8 +1,10 @@
 
 
-public class Enigma{
+public class Enigma {
     public static void main(String[] args) {
-        System.out.println("Siema w enigmie");
+        Rot13 decrypt = new Rot13();
+        decrypt.decrypt(args);
+      
     }
 
 }
