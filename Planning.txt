@@ -3,7 +3,7 @@ Planning
 1. Podzial na szyfry:
 Konrad: ROT13, 
 Szymon: Caesar,
-Hubert:
+Hubert: Atbash, Baconian
 
 2. Glowny plik enigma.java
 Kazdy szyfr w osobnym pliku/klasie
