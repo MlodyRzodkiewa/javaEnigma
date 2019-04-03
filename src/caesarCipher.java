@@ -1,33 +1,34 @@
 public class caesarCipher
 {
    public static String encrypt(String[] args)
-   {
-      String msg = args[2];
+   {  
+      String cipheredMessage = "";
+      String message = args[2].toLowerCase();
       int shift = Integer.parseInt(args[3]);
-      String shiftedWord = "";
+      
       if (args[1].equals("-e"))
       {
-         for(int x = 0; x < msg.length(); x++)
+         for(int x = 0; x < message.length(); x++)
          {
-            char ch = (char)(msg.charAt(x) + shift);
+            char ch = (char)(message.charAt(x) + shift);
             if (ch > 'z')
-               shiftedWord += (char)(msg.charAt(x) - (26 - shift));
+               cipheredMessage += (char)(message.charAt(x) - (26 - shift));
             else
-               shiftedWord += (char)(msg.charAt(x) + shift);
+               cipheredMessage += (char)(message.charAt(x) + shift);
          }
-         return shiftedWord;
+         return cipheredMessage;
       }  
          else if (args[1].equals("-d"))
       {
-         for(int x = 0; x < msg.length(); x++)
+         for(int x = 0; x < message.length(); x++)
          {
-            char ch = (char)(msg.charAt(x) - shift);
+            char ch = (char)(message.charAt(x) - shift);
             if (ch < 'a')
-               shiftedWord += (char)(msg.charAt(x) + (26 - shift));
+               cipheredMessage += (char)(message.charAt(x) + (26 - shift));
             else
-               shiftedWord += (char)(msg.charAt(x) - shift);
+               cipheredMessage += (char)(message.charAt(x) - shift);
          }
-         return shiftedWord;
+         return cipheredMessage;
       }
       return "Error";
    }
