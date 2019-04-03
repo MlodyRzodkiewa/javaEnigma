@@ -3,26 +3,8 @@ import java.util.Scanner;
 
 public class atbash
 {
-    private static Scanner in;
-    public static void main(String[] args) 
-    {
-        in = new Scanner(System.in);
-        System.out.print("1. Encr\n2. Decr");  
-        int choice = in.nextInt();
-        in.nextLine();
 
-        if(choice == 1)
-        {
-            System.out.println("Encryption");
-            atbashEncryption();
-        } else if(choice == 2)
-        {
-            System.out.println("Decryption");
-            atbashDecryption();
-        }
-    }
-
-    private static void atbashEncryption()
+    public String atbashEncryption(String message)
     {
         String alphabet = "ABCDEFGHIJKLMNOPRSTUWYZ";
         String reverseAlphabet = "";
@@ -32,36 +14,32 @@ public class atbash
             reverseAlphabet += alphabet.charAt(i);
         }
 
-        System.out.println("Enter message: ");
-        String message = in.nextLine();
-        in.nextLine();
-
         message = message.toUpperCase();
 
-        String decryptedText = "";
+        String encryptedText = "";
         for (int i = 0; i < message.length(); i++)
         {
             if(message.charAt(i) == (char)32)
             {
-                decryptedText += " ";
+                encryptedText += " ";
             } else {
                 int count = 0;
                 for (int j = 0; j < alphabet.length(); j++)
                 {
                     if(message.charAt(i) == alphabet.charAt(j))
                     {
-                        decryptedText += reverseAlphabet.charAt(j);
+                        encryptedText += reverseAlphabet.charAt(j);
                         break;
                     }
                 } // for
             } // else
         } // for
-
-        System.out.println("Encrypted message: " + decryptedText);
+        System.out.println(encryptedText);
+        return encryptedText;
     } // method
 
 
-    private static void atbashDecryption()
+    public String atbashDecryption(String message)
     {
         String alphabet = "ABCDEFGHIJKLMNOPRSTUWYZ";
         String reverseAlphabet = "";
@@ -70,12 +48,7 @@ public class atbash
         {
             reverseAlphabet += alphabet.charAt(i);
         }
-
-        System.out.println("Enter encrypted message: ");
-        String message = in.nextLine();
-        in.nextLine();
-        
-        message = message.toUpperCase();
+        message = message.toUpperCase(); // ! nie działa.
 
         String decryptedText = "";
         for (int i = 0; i < message.length(); i++)
@@ -95,8 +68,7 @@ public class atbash
                 } // for
             } // else
         } // for
-
-        System.out.println("Decrypted message: " + decryptedText);
+        System.out.println(decryptedText);
+        return decryptedText;
     } // method
-
 } // class
