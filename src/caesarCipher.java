@@ -5,7 +5,7 @@ public class caesarCipher
       String msg = args[2];
       int shift = Integer.parseInt(args[3]);
       String shiftedWord = "";
-      if (args[0].equals("-e"))
+      if (args[1].equals("-e"))
       {
          for(int x = 0; x < msg.length(); x++)
          {
@@ -17,7 +17,7 @@ public class caesarCipher
          }
          return shiftedWord;
       }  
-         else if (args[0].equals("-d"))
+         else if (args[1].equals("-d"))
       {
          for(int x = 0; x < msg.length(); x++)
          {
@@ -32,6 +32,5 @@ public class caesarCipher
       return "Error";
    }
 }
-
 
 
