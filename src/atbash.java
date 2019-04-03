@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class atbash
 {
+
     public String atbashEncryption(String message)
     {
         String alphabet = "ABCDEFGHIJKLMNOPRSTUWYZ";
@@ -33,7 +34,7 @@ public class atbash
                 } // for
             } // else
         } // for
-
+        System.out.println(encryptedText);
         return encryptedText;
     } // method
 
@@ -47,8 +48,7 @@ public class atbash
         {
             reverseAlphabet += alphabet.charAt(i);
         }
-        
-        message = message.toUpperCase();
+        message = message.toUpperCase(); // ! nie działa.
 
         String decryptedText = "";
         for (int i = 0; i < message.length(); i++)
@@ -68,8 +68,7 @@ public class atbash
                 } // for
             } // else
         } // for
-
+        System.out.println(decryptedText);
         return decryptedText;
     } // method
-
 } // class
