@@ -17,7 +17,7 @@ public class vigenereCipher
          }
          return cipheredMessage;
       }
-      else if (args[0].equals("-d"))
+      else if (args[1].equals("-d"))
       {
          for (int i = 0, j = 0; i < message.length(); i++) 
          {
