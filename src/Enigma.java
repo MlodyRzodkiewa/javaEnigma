@@ -29,12 +29,12 @@ public class Enigma {
                     }
                 }
                 else if(args[0].equals("caesar")) {
-                    caesarCipher cipher = new caesarCipher();
-                    cipher.encrypt(args);
+                    caesarCipher caesar = new caesarCipher();
+                    caesar.encrypt(args);
                 }
                 else if(args[0].equals("vigenere")) {
-                    vigenereCipher cipher = new vigenereCipher();
-                    cipher.encrypt(args);
+                    vigenereCipher vigenere = new vigenereCipher();
+                    vigenere.encrypt(args);
                 }
                 else {
                     System.out.println("No cipher in database!");
