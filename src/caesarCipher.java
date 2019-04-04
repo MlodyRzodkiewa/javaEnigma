@@ -16,7 +16,7 @@ public class caesarCipher
             else
                cipheredMessage += (char)(message.charAt(x) + shift);
          }
-         return cipheredMessage;
+         System.out.println("Encrypted message: " + cipheredMessage);
       }  
          else if (args[1].equals("-d"))
       {
@@ -28,7 +28,7 @@ public class caesarCipher
             else
                cipheredMessage += (char)(message.charAt(x) - shift);
          }
-         return cipheredMessage;
+         System.out.println("Decrypted message: " + cipheredMessage);
       }
       return "Error";
    }
