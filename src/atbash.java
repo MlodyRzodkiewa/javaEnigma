@@ -3,8 +3,7 @@ import java.util.Scanner;
 
 public class atbash
 {
-
-    public String atbashEncryption(String message)
+    public void atbashEncryption(String message)
     {
         String alphabet = "ABCDEFGHIJKLMNOPRSTUWYZ";
         String reverseAlphabet = "";
@@ -34,12 +33,11 @@ public class atbash
                 } // for
             } // else
         } // for
-        System.out.println(encryptedText);
-        return encryptedText;
+        System.out.println(" Encrypted message: " + encryptedText);
     } // method
 
 
-    public String atbashDecryption(String message)
+    public void atbashDecryption(String message)
     {
         String alphabet = "ABCDEFGHIJKLMNOPRSTUWYZ";
         String reverseAlphabet = "";
@@ -68,7 +66,6 @@ public class atbash
                 } // for
             } // else
         } // for
-        System.out.println(decryptedText);
-        return decryptedText;
+        System.out.println(" Decrypted message: " + decryptedText);
     } // method
 } // class
