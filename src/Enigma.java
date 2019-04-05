@@ -37,6 +37,15 @@ public class Enigma {
                 } else if (args[0].equals("Vigenere")) {
                     vigenereCipher vigenere = new vigenereCipher();
                     vigenere.encrypt(args);
+                } else if (args[0].equals("Morse")) {
+                    Morse morseCipher = new Morse();
+                    if (args[1].equals("-e")) {
+                        morseCipher.encrypt(args);
+                    }
+                    if (args[1].equals("-d")) {
+                        morseCipher.decrypt(args);
+                    }
+
                 } else {
                     System.out.println("No cipher in database!");
                 }
